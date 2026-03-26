@@ -2,31 +2,74 @@ aid: salt-security
 url: >-
   https://raw.githubusercontent.com/api-evangelist/salt-security/refs/heads/main/apis.yml
 apis:
-  - aid: salt-security:salt-security
-    name: Salt Security
+  - aid: salt-security:salt-security-platform
+    name: Salt Security API Protection Platform
     tags:
-      - API
-    humanURL: https://salt.security/use-cases/discover-all-apis
+      - API Security
+      - API Discovery
+      - Threat Protection
+      - Posture Governance
+    humanURL: https://salt.security
     properties:
-      - url: https://salt.security/use-cases/discover-all-apis
+      - url: https://salt.security/api-security-platform
         type: Documentation
+      - url: https://salt.security/use-cases/discover-all-apis
+        type: API Discovery
+      - url: https://salt.security/use-cases/prevent-attacks
+        type: Threat Protection
+      - url: https://salt.security/use-cases/improve-api-security-posture
+        type: Posture Governance
     description: >-
-      Only Salt automatically and continuously discovers all APIs, capturing
-      details to help you eliminate blind spots, assess risk, and keep APIs
-      protected.
+      The Salt Security API Protection Platform provides full lifecycle API
+      security including API discovery, posture governance, and threat
+      protection. It uses AI and machine learning to automatically discover all
+      APIs, identify vulnerabilities, stop attacks, and provide remediation
+      insights.
 name: Salt Security
 tags:
   - Security
   - Platform
+  - API Discovery
+  - Threat Protection
+  - Posture Governance
+  - AI
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
 created: '2025-01-08'
-modified: '2026-03-16'
+modified: '2026-03-26'
 position: Consumer
 description: >-
-  Only Salt automatically and continuously discovers all APIs, capturing details
-  to help you eliminate blind spots, assess risk, and keep APIs protected.
+  Salt Security provides an AI-powered API security platform that discovers all
+  APIs, stops API attacks, and provides remediation insights. The platform
+  delivers full lifecycle API security through API discovery, posture
+  governance, and advanced threat protection using patented AI and ML
+  technology.
+common:
+  - type: Website
+    url: https://salt.security
+  - type: Documentation
+    url: https://salt.security/api-security-platform
+  - type: Blog
+    url: https://salt.security/blog
+  - type: Pricing
+    url: https://salt.security/pricing
+  - type: Partners
+    url: https://salt.security/partners
+  - type: About
+    url: https://salt.security/about
+  - type: Contact
+    url: https://salt.security/contact
+  - type: Demo
+    url: https://salt.security/demo
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/saltsecurity/
+  - type: Twitter
+    url: https://twitter.com/salaboreal
+  - type: Resources
+    url: https://salt.security/resources
+  - type: Use Cases
+    url: https://salt.security/use-cases
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
