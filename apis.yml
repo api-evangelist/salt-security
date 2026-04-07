@@ -5,10 +5,10 @@ apis:
   - aid: salt-security:salt-security-platform
     name: Salt Security API Protection Platform
     tags:
-      - API Security
       - API Discovery
-      - Threat Protection
+      - API Security
       - Posture Governance
+      - Threat Protection
     humanURL: https://salt.security
     properties:
       - url: https://salt.security/api-security-platform
@@ -27,12 +27,12 @@ apis:
       insights.
 name: Salt Security
 tags:
-  - Security
-  - Platform
-  - API Discovery
-  - Threat Protection
-  - Posture Governance
   - AI
+  - API Discovery
+  - Platform
+  - Posture Governance
+  - Security
+  - Threat Protection
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
