@@ -1,0 +1,40 @@
+{
+  "title": "Salt Security API Endpoint Structure",
+  "description": "JSON structure documentation for the Salt Security discovered API endpoint entity",
+  "type": "object",
+  "structure": {
+    "id": "string - Unique endpoint identifier [required]",
+    "method": "string - HTTP method (GET|POST|PUT|PATCH|DELETE|OPTIONS|HEAD) [required]",
+    "path": "string - API endpoint path [required]",
+    "host": "string - API host/domain [required]",
+    "api_id": "string - Parent API identifier",
+    "api_name": "string - Parent API name",
+    "status": "string - Status (active|deprecated|shadow|zombie|undocumented)",
+    "classification": {
+      "is_documented": "boolean - Exists in OAS documentation",
+      "is_shadow": "boolean - Shadow endpoint (not in OAS)",
+      "is_zombie": "boolean - Zombie endpoint (deprecated but accessible)"
+    },
+    "sensitive_data": {
+      "type": "array",
+      "items": {
+        "type": "string - Data type (PII|PCI|PHI|credentials)",
+        "parameter": "string - Parameter name",
+        "location": "string - Location (request|response)"
+      }
+    },
+    "risk_score": "number(0-100) - Risk score",
+    "vulnerabilities": {
+      "type": "array",
+      "items": {
+        "id": "string - Vulnerability ID",
+        "type": "string - Vulnerability type",
+        "severity": "string - Severity (critical|high|medium|low|informational)",
+        "description": "string - Description"
+      }
+    },
+    "authentication_required": "boolean - Auth required",
+    "first_seen": "string(date-time) - First discovery timestamp",
+    "last_seen": "string(date-time) - Last traffic timestamp"
+  }
+}

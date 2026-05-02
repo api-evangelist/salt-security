@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/salt-security/json-schema/salt-security-attack-schema.json",
+  "title": "Salt Security API Attack",
+  "description": "An API attack event detected and analyzed by the Salt Security threat protection engine.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the attack event"
+    },
+    "attack_type": {
+      "type": "string",
+      "description": "Type of API attack detected",
+      "enum": [
+        "BOLA",
+        "BFLA",
+        "Injection",
+        "Authentication Bypass",
+        "Credential Stuffing",
+        "Account Takeover",
+        "Excessive Data Exposure",
+        "Mass Assignment",
+        "Rate Limiting Bypass",
+        "Shadow Parameter Exploitation",
+        "Unknown"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "description": "Severity level of the attack",
+      "enum": ["critical", "high", "medium", "low"]
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the attack",
+      "enum": ["active", "blocked", "resolved", "investigating"]
+    },
+    "source_ip": {
+      "type": "string",
+      "description": "Source IP address of the attacker"
+    },
+    "target_endpoint": {
+      "type": "string",
+      "description": "API endpoint being attacked"
+    },
+    "target_api_id": {
+      "type": "string",
+      "description": "ID of the API being attacked"
+    },
+    "attack_signature": {
+      "type": "string",
+      "description": "Pattern or signature that identified this as an attack"
+    },
+    "request_count": {
+      "type": "integer",
+      "description": "Number of malicious requests in this attack"
+    },
+    "affected_users": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "User IDs or identifiers affected by this attack"
+    },
+    "data_exposed": {
+      "type": "boolean",
+      "description": "Whether sensitive data was potentially exposed"
+    },
+    "mitigation_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "description": "Mitigation action taken (e.g., block, alert, rate-limit)"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "remediation": {
+      "type": "object",
+      "properties": {
+        "recommendation": {
+          "type": "string",
+          "description": "Developer-friendly remediation recommendation"
+        },
+        "cwe": {
+          "type": "string",
+          "description": "Related CWE identifier"
+        },
+        "owasp": {
+          "type": "string",
+          "description": "Related OWASP API Security Top 10 category"
+        }
+      }
+    },
+    "detected_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when attack was first detected"
+    },
+    "resolved_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when attack was resolved"
+    }
+  },
+  "required": ["id", "attack_type", "severity", "target_endpoint"],
+  "additionalProperties": false
+}

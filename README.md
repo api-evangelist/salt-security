@@ -1,41 +1,39 @@
-# Salt Security (salt-security)
-Only Salt automatically and continuously discovers all APIs, capturing details to help you eliminate blind spots, assess risk, and keep APIs protected.
+# Salt Security
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/salt-security/refs/heads/main/apis.yml)
-
-## Scope
-
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
-
-## Tags:
-
- - Security, Platform
-
-## Timestamps
-
-- **Created:** 2025-01-08 
-- **Modified:** 2026-03-16 
+Salt Security provides an AI-powered API security platform that discovers all APIs, stops API attacks in real-time, and provides remediation insights. The platform delivers full lifecycle API security through API discovery, posture governance, and advanced threat protection using patented AI and ML technology. In 2026, Salt expanded to Agentic Security covering MCP server discovery.
 
 ## APIs
 
-### Salt Security
-Only Salt automatically and continuously discovers all APIs, capturing details to help you eliminate blind spots, assess risk, and keep APIs protected.
+| API | Description |
+|---|---|
+| [Salt Security API Protection Platform](https://salt.security/api-security-platform) | Full lifecycle API security with discovery, posture governance, and threat protection |
+| [Salt Security Developer Portal API](https://salt.security/blog/introducing-the-salt-developer-portal-unleash-the-power-of-automating-api-security) | REST APIs for automating API security practices |
 
-**Human URL:** [https://salt.security/use-cases/discover-all-apis](https://salt.security/use-cases/discover-all-apis)
+## Resources
 
+- **Website**: [salt.security](https://salt.security)
+- **Platform**: [salt.security/platform](https://salt.security/platform)
+- **Developer Portal**: [salt.security blog](https://salt.security/blog/introducing-the-salt-developer-portal-unleash-the-power-of-automating-api-security)
+- **Blog**: [salt.security/blog](https://salt.security/blog)
+- **Use Cases**: [salt.security/use-cases](https://salt.security/use-cases)
+- **Demo**: [salt.security/demo](https://salt.security/demo)
+- **LinkedIn**: [linkedin.com/company/saltsecurity](https://www.linkedin.com/company/saltsecurity/)
 
-#### Tags:
+## Artifacts
 
- - API
+### JSON Schema
+- [salt-security-api-endpoint-schema.json](json-schema/salt-security-api-endpoint-schema.json) — Discovered API endpoint schema
+- [salt-security-attack-schema.json](json-schema/salt-security-attack-schema.json) — API attack event schema
 
-#### Properties
+### JSON Structure
+- [salt-security-api-endpoint-structure.json](json-structure/salt-security-api-endpoint-structure.json) — API endpoint structure documentation
 
-- [Documentation](https://salt.security/use-cases/discover-all-apis)
+### JSON-LD
+- [salt-security-context.jsonld](json-ld/salt-security-context.jsonld) — Linked data context for API security entities
 
-## Maintainers
+### Vocabulary
+- [salt-security-vocabulary.yml](vocabulary/salt-security-vocabulary.yml) — API security terminology
 
-**FN:** Kin Lane
+## Maintained By
 
-**Email:** kin@apievangelist.com
+[Kin Lane](mailto:kin@apievangelist.com) — [API Evangelist](https://apievangelist.com)

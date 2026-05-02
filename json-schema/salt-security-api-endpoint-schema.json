@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-evangelist.github.io/salt-security/json-schema/salt-security-api-endpoint-schema.json",
+  "title": "Salt Security API Endpoint",
+  "description": "An API endpoint discovered and tracked by the Salt Security API Protection Platform.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the discovered API endpoint"
+    },
+    "method": {
+      "type": "string",
+      "description": "HTTP method",
+      "enum": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"]
+    },
+    "path": {
+      "type": "string",
+      "description": "API endpoint path"
+    },
+    "host": {
+      "type": "string",
+      "description": "API host/domain"
+    },
+    "api_id": {
+      "type": "string",
+      "description": "Parent API identifier this endpoint belongs to"
+    },
+    "api_name": {
+      "type": "string",
+      "description": "Name of the parent API"
+    },
+    "status": {
+      "type": "string",
+      "description": "Status of the endpoint",
+      "enum": ["active", "deprecated", "shadow", "zombie", "undocumented"]
+    },
+    "is_documented": {
+      "type": "boolean",
+      "description": "Whether this endpoint exists in OpenAPI/Swagger documentation"
+    },
+    "is_shadow": {
+      "type": "boolean",
+      "description": "Whether this is a shadow endpoint (undiscovered, not in OAS docs)"
+    },
+    "is_zombie": {
+      "type": "boolean",
+      "description": "Whether this is a zombie endpoint (deprecated but still accessible)"
+    },
+    "sensitive_data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type of sensitive data (PII, PCI, PHI, credentials)"
+          },
+          "parameter": {
+            "type": "string",
+            "description": "Parameter name containing sensitive data"
+          },
+          "location": {
+            "type": "string",
+            "enum": ["request", "response"],
+            "description": "Where sensitive data appears"
+          }
+        }
+      },
+      "description": "Sensitive data fields found in this endpoint"
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Risk score for this endpoint (0-100)"
+    },
+    "vulnerabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low", "informational"]
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Identified vulnerabilities for this endpoint"
+    },
+    "authentication_required": {
+      "type": "boolean",
+      "description": "Whether authentication is required for this endpoint"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when endpoint was first discovered"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of most recent traffic"
+    }
+  },
+  "required": ["id", "method", "path", "host"],
+  "additionalProperties": false
+}

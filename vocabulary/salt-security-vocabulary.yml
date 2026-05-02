@@ -1,0 +1,163 @@
+vocabulary:
+  title: Salt Security API Security Vocabulary
+  description: >-
+    Vocabulary and taxonomy for the Salt Security API Protection Platform,
+    covering API security concepts, attack patterns, discovery terminology,
+    and posture governance.
+  version: '1.0'
+  created: '2026-05-02'
+  provider: Salt Security
+
+terms:
+
+  # Core Platform Concepts
+  - term: API Discovery
+    definition: >-
+      The automated process of detecting and cataloging all APIs in an organization's
+      environment, including internal, external, partner, shadow, and zombie APIs,
+      without requiring manual inventory or agent instrumentation.
+    related: [Shadow API, Zombie API, API Inventory]
+    tags: [Core, Discovery]
+
+  - term: API Inventory
+    definition: >-
+      The comprehensive catalog of all discovered APIs, endpoints, parameters, and
+      data flows within an organization, maintained automatically by the Salt platform.
+    related: [API Discovery, Endpoint, Shadow API]
+    tags: [Core, Discovery]
+
+  - term: Shadow API
+    definition: >-
+      An undocumented API endpoint that is actively handling traffic but does not
+      appear in any official API documentation (OpenAPI spec, Swagger, etc.). Shadow
+      APIs represent unknown attack surface.
+    related: [Zombie API, API Discovery, Endpoint]
+    tags: [Discovery, Risk]
+
+  - term: Zombie API
+    definition: >-
+      A deprecated or decommissioned API endpoint that still accepts traffic despite
+      no longer being officially supported. Zombie APIs often lack security controls
+      and represent a significant attack risk.
+    related: [Shadow API, API Discovery, Endpoint]
+    tags: [Discovery, Risk]
+
+  - term: Posture Governance
+    definition: >-
+      The continuous assessment and enforcement of API security best practices across
+      all discovered APIs, including documentation completeness, authentication coverage,
+      data exposure analysis, and policy compliance.
+    related: [Risk Score, Vulnerability, OAS Compliance]
+    tags: [Core, Governance]
+
+  - term: Threat Protection
+    definition: >-
+      Real-time detection and blocking of API attacks using AI-powered behavioral
+      analysis that identifies malicious patterns without requiring rule-based signatures.
+    related: [API Attack, BOLA, BFLA, Attacker Fingerprint]
+    tags: [Core, Security]
+
+  # Attack Types (OWASP API Security Top 10)
+  - term: BOLA
+    definition: >-
+      Broken Object Level Authorization (OWASP API1:2023) — the most common API attack
+      where an attacker exploits missing authorization checks to access resources belonging
+      to other users by manipulating object IDs in API calls.
+    related: [BFLA, Authorization, OWASP API Security]
+    tags: [Attack, OWASP]
+
+  - term: BFLA
+    definition: >-
+      Broken Function Level Authorization (OWASP API5:2023) — an attack exploiting
+      missing authorization checks at the function/action level, allowing attackers to
+      perform privileged operations (admin actions, bulk operations) as unprivileged users.
+    related: [BOLA, Authorization, OWASP API Security]
+    tags: [Attack, OWASP]
+
+  - term: Excessive Data Exposure
+    definition: >-
+      An API vulnerability where endpoints return more data than is necessary for the
+      client, relying on clients to filter sensitive fields. Attackers intercept and
+      exploit the excess data returned.
+    related: [PII, PCI, PHI, Sensitive Data]
+    tags: [Vulnerability, OWASP]
+
+  - term: Mass Assignment
+    definition: >-
+      An API vulnerability where the API automatically binds client-provided JSON
+      properties to internal data model properties, allowing attackers to modify
+      fields they should not have access to.
+    related: [BOLA, Injection]
+    tags: [Vulnerability, OWASP]
+
+  - term: Attacker Fingerprint
+    definition: >-
+      A unique behavioral profile built by Salt's AI engine to identify a specific
+      attacker across multiple sessions, IPs, and time periods, enabling attribution
+      and blocking even when attackers rotate credentials.
+    related: [Threat Protection, API Attack, AI]
+    tags: [Detection, AI]
+
+  # Sensitive Data Types
+  - term: PII
+    definition: >-
+      Personally Identifiable Information — data that can identify an individual,
+      such as names, email addresses, SSNs, or phone numbers. Salt identifies PII
+      in API responses to flag data exposure risks.
+    related: [PCI, PHI, Sensitive Data, Excessive Data Exposure]
+    tags: [DataType, Compliance]
+
+  - term: PCI
+    definition: >-
+      Payment Card Industry data — credit card numbers, CVVs, and financial data
+      regulated under PCI DSS. Salt detects PCI data in API traffic to identify
+      compliance risks.
+    related: [PII, PHI, Sensitive Data]
+    tags: [DataType, Compliance]
+
+  - term: PHI
+    definition: >-
+      Protected Health Information — medical records and health data regulated under
+      HIPAA. Salt detects PHI in API traffic to identify healthcare compliance risks.
+    related: [PII, PCI, Sensitive Data]
+    tags: [DataType, Compliance]
+
+  # Technical Concepts
+  - term: OAS Compliance
+    definition: >-
+      The degree to which an API's actual behavior matches its OpenAPI Specification
+      (OAS) documentation. Salt compares live traffic against OAS to detect undocumented
+      endpoints, shadow parameters, and specification drift.
+    related: [OpenAPI, Shadow API, API Inventory]
+    tags: [Governance, Documentation]
+
+  - term: Shadow Parameter
+    definition: >-
+      An undocumented API parameter that accepts input but does not appear in the
+      OpenAPI specification. Shadow parameters can be exploited to inject data or
+      bypass security controls.
+    related: [Shadow API, OAS Compliance]
+    tags: [Discovery, Risk]
+
+  - term: Risk Score
+    definition: >-
+      A numerical score (0-100) assigned by Salt's AI engine to each API and endpoint,
+      reflecting the likelihood and potential impact of exploitation based on attack
+      traffic, vulnerabilities, and sensitive data exposure.
+    related: [Posture Governance, Vulnerability]
+    tags: [Metrics, Risk]
+
+  - term: Agentic Security
+    definition: >-
+      Salt Security's 2026 platform capability for securing AI agents and MCP
+      (Model Context Protocol) servers, including discovery of agentic API surfaces
+      and protection against AI-specific attack vectors.
+    related: [MCP, AI Security, API Discovery]
+    tags: [Platform, AI]
+
+  - term: MCP Discovery
+    definition: >-
+      Salt Security's capability to automatically discover Model Context Protocol
+      (MCP) servers and their tool endpoints as part of the agentic API attack surface.
+    related: [Agentic Security, API Discovery]
+    tags: [Platform, AI]

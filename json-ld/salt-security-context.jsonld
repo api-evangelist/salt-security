@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "salt": "https://api-evangelist.github.io/salt-security/vocab#",
+    "sec": "https://w3id.org/security#",
+
+    "APIEndpoint": {
+      "@id": "salt:APIEndpoint",
+      "@context": {
+        "id": "@id",
+        "method": "salt:httpMethod",
+        "path": "salt:endpointPath",
+        "host": "salt:hostDomain",
+        "api_id": "salt:parentApi",
+        "api_name": "schema:name",
+        "status": "salt:endpointStatus",
+        "is_documented": "salt:isDocumented",
+        "is_shadow": "salt:isShadow",
+        "is_zombie": "salt:isZombie",
+        "sensitive_data": "salt:sensitiveData",
+        "risk_score": "salt:riskScore",
+        "vulnerabilities": "salt:vulnerabilities",
+        "authentication_required": "salt:authRequired",
+        "first_seen": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "last_seen": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "APIAttack": {
+      "@id": "salt:APIAttack",
+      "@context": {
+        "id": "@id",
+        "attack_type": "salt:attackType",
+        "severity": "salt:severity",
+        "status": "salt:incidentStatus",
+        "source_ip": "salt:sourceIP",
+        "target_endpoint": "salt:targetEndpoint",
+        "target_api_id": "salt:targetAPI",
+        "request_count": "salt:requestCount",
+        "data_exposed": "salt:dataExposed",
+        "remediation": "salt:remediation",
+        "detected_at": {
+          "@id": "salt:detectedAt",
+          "@type": "xsd:dateTime"
+        },
+        "resolved_at": {
+          "@id": "salt:resolvedAt",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "APIInventory": {
+      "@id": "salt:APIInventory",
+      "@context": {
+        "id": "@id",
+        "name": "schema:name",
+        "description": "schema:description",
+        "endpoints": "salt:hasEndpoints",
+        "risk_score": "salt:riskScore"
+      }
+    },
+
+    "SecurityPosture": {
+      "@id": "salt:SecurityPosture",
+      "@context": {
+        "api_id": "salt:forApi",
+        "score": "salt:postureScore",
+        "findings": "salt:postureFindings",
+        "last_assessed": {
+          "@id": "salt:lastAssessed",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}
