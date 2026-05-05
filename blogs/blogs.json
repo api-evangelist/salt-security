@@ -1,0 +1,13 @@
+{
+  "repo": "salt-security",
+  "feeds": [
+    {
+      "source": "https://salt.security/blog",
+      "feed_url": "https://salt.security/blog/rss.xml",
+      "saved": 10,
+      "title": "Salt Security Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:35:33Z"
+}
