@@ -4,10 +4,10 @@
     {
       "source": "https://salt.security/blog",
       "feed_url": "https://salt.security/blog/rss.xml",
-      "saved": 10,
-      "title": "Salt Security Blog"
+      "title": "Salt Security Blog",
+      "saved": 0
     }
   ],
   "post_count": 10,
-  "fetched": "2026-05-03T23:35:33Z"
+  "fetched": "2026-05-09T20:17:51Z"
 }
