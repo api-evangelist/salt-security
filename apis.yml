@@ -96,6 +96,14 @@ common:
   - type: AgenticSecurity
     url: https://salt.security/platform
 
+  - type: Integrations
+    url: https://salt.security/partners
+integrations:
+  - name: CrowdStrike Correlate API & endpoint
+  - name: AWS API visibility in AWS
+  - name: Kong Secure Kong traffic
+  - name: HCL Partnered deployments
+  - name: Open in new tab
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
