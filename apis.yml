@@ -65,6 +65,8 @@ apis:
         type: Documentation
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/Secful
   - type: Website
     url: https://salt.security
   - type: Platform
