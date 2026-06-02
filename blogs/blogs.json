@@ -2,12 +2,17 @@
   "repo": "salt-security",
   "feeds": [
     {
-      "source": "https://salt.security/blog",
+      "source": "https://salt.security/blog/rss.xml",
       "feed_url": "https://salt.security/blog/rss.xml",
-      "title": "Salt Security Blog",
-      "saved": 46
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://salt.security/api-security-platform",
+      "error": "HTTPError"
     }
   ],
-  "post_count": 56,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 58,
+  "fetched": "2026-06-01T23:35:02Z"
 }
