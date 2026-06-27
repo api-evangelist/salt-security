@@ -5,7 +5,7 @@
       "source": "https://salt.security/blog/rss.xml",
       "feed_url": "https://salt.security/blog/rss.xml",
       "title": "",
-      "saved": 2,
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -13,6 +13,6 @@
       "error": "HTTPError"
     }
   ],
-  "post_count": 61,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 62,
+  "fetched": "2026-06-27T12:03:07Z"
 }
