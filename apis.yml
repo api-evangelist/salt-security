@@ -65,6 +65,8 @@ apis:
         type: Documentation
 
 common:
+  - type: DomainSecurity
+    url: security/salt-security-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/Secful
   - type: Website
