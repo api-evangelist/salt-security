@@ -23,6 +23,13 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/salt-security.png
 tags:
   - API Security
+  - Artificial Intelligence
+  - API Discovery
+  - Posture Governance
+  - Threat Protection
+  - Security
+tags_raw:
+  - API Security
   - AI
   - API Discovery
   - Posture Governance
@@ -44,6 +51,12 @@ apis:
       and provide developer-friendly remediation guidance.
     humanURL: https://salt.security/api-security-platform
     tags:
+      - API Discovery
+      - API Security
+      - Posture Governance
+      - Threat Protection
+      - Artificial Intelligence
+    tags_raw:
       - API Discovery
       - API Security
       - Posture Governance
