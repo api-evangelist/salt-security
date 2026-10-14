@@ -1,6 +1,7 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- crowdstrike/integrations/crowdstrike-integration-edges.yml
 - https://aws.amazon.com/marketplace/
 - https://azuremarketplace.microsoft.com/
 marketplace_apps: []
@@ -38,3 +39,23 @@ edges:
   seller_name: Salt Security
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: CrowdStrike (own)
+  partner: crowdstrike
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.crowdstrike.com/listings/salt-api-security-platform-data-connector/
+  mirror_of: crowdstrike/integrations/crowdstrike-integration-edges.yml
+  apps:
+  - Salt API Security Data Connector
+  - Salt Security API Protection Platform
+  - Salt Security Falcon Foundry Application
+  listing_count: 3
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+source:
+- crowdstrike/integrations/crowdstrike-integration-edges.yml
