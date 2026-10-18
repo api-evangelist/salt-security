@@ -4,6 +4,7 @@ checked:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
 - https://aws.amazon.com/marketplace/
 - https://azuremarketplace.microsoft.com/
+- kong/integrations/kong-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -57,5 +58,22 @@ edges:
   listing_count: 3
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
+- partner_name: Kong (own)
+  partner: kong
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://developer.konghq.com/plugins/salt-agent/
+  mirror_of: kong/integrations/kong-integration-edges.yml
+  apps:
+  - Salt Security
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Kong Plugin Hub
 source:
 - crowdstrike/integrations/crowdstrike-integration-edges.yml
