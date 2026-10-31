@@ -64,40 +64,137 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Salt Security provides an AI-powered API security platform that discovers all APIs, stops API attacks in real-time, and provides remediation insights. The platform delivers full lifecycle API security through API discovery, posture governance, and advanced threat protection using patented AI and ML technology. In 2026, Salt expanded to Agentic Security covering MCP server discovery.
+Salt Security provides an AI-powered API security platform that discovers all APIs, stops API attacks in real-time, and provides remediation insights. The platform delivers full lifecycle API security through API discovery, posture governance, and advanced threat protection using patented AI and ML technology. Salt Security announced an Agentic AI Security platform and MCP Discovery capabilities in 2026.
 
-## APIs
+**Areas:** API Security · Artificial Intelligence · API Discovery · Posture Governance · Threat Protection · Security
 
-| API | Description |
+## Salt Security on APIs.io
+
+Everything profiled for Salt Security is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/salt-security/](https://apis.io/providers/salt-security/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [Salt Security API Protection Platform](https://apis.io/apis/salt-security/salt-security-platform/) — The Salt Security API Protection Platform provides full lifecycle API security including automated API discovery, posture governance, real-time threat…
+- [Salt Security Developer Portal API](https://apis.io/apis/salt-security/salt-developer-portal-api/) — The Salt Security Developer Portal provides REST APIs for automating API security practices. The portal offers comprehensive documentation with…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (2)
+
+The data models the API reads and writes.
+
+- [Salt Security API Endpoint](https://apis.io/schemas/salt-security/salt-security-api-endpoint/)
+- [Salt Security API Attack](https://apis.io/schemas/salt-security/salt-security-attack/)
+
+#### JSON Structure (1)
+
+Data models expressed in JSON Structure.
+
+- [Salt Security Api Endpoint Structure](https://apis.io/json-structure/salt-security/salt-security-api-endpoint-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Salt Security Context](https://apis.io/jsonld/salt-security/salt-security-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Salt Security API Security Vocabulary](https://apis.io/vocabularies/salt-security/salt-security-vocabulary/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Salt Security — jsonschema rules](https://apis.io/rules/salt-security/salt-security-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Salt Security Domain Security](https://apis.io/security/salt-security/salt-security-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Salt Security Plans Pricing](https://apis.io/plans/salt-security/salt-security-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Salt Security Rate Limits](https://apis.io/rate-limits/salt-security/salt-security-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Salt Security Finops](https://apis.io/finops/salt-security/salt-security-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://salt.security)
+- [Documentation](https://salt.security/api-security-platform)
+- [Pricing](https://salt.security/pricing)
+- [Blog](https://salt.security/blog)
+- [GitHub](https://github.com/Secful)
+
+## API Evangelist rating
+
+**Kin Score 11.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
 |---|---|
-| [Salt Security API Protection Platform](https://salt.security/api-security-platform) | Full lifecycle API security with discovery, posture governance, and threat protection |
-| [Salt Security Developer Portal API](https://salt.security/blog/introducing-the-salt-developer-portal-unleash-the-power-of-automating-api-security) | REST APIs for automating API security practices |
+| Discoverability | 57.1 |
+| Contract quality | 6.7 |
+| Contract governance | 9.8 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 7.9 |
 
-## Resources
+**Agent readiness 0.6** — human-only
 
-- **Website**: [salt.security](https://salt.security)
-- **Platform**: [salt.security/platform](https://salt.security/platform)
-- **Developer Portal**: [salt.security blog](https://salt.security/blog/introducing-the-salt-developer-portal-unleash-the-power-of-automating-api-security)
-- **Blog**: [salt.security/blog](https://salt.security/blog)
-- **Use Cases**: [salt.security/use-cases](https://salt.security/use-cases)
-- **Demo**: [salt.security/demo](https://salt.security/demo)
-- **LinkedIn**: [linkedin.com/company/saltsecurity](https://www.linkedin.com/company/saltsecurity/)
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-## Artifacts
+**Regulatory alignment 10.0** — Horizontal (data, software, accessibility, platform)
 
-### JSON Schema
-- [salt-security-api-endpoint-schema.json](json-schema/salt-security-api-endpoint-schema.json) — Discovered API endpoint schema
-- [salt-security-attack-schema.json](json-schema/salt-security-attack-schema.json) — API attack event schema
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/salt-security/](https://apis.io/providers/salt-security/).
 
-### JSON Structure
-- [salt-security-api-endpoint-structure.json](json-structure/salt-security-api-endpoint-structure.json) — API endpoint structure documentation
+## How this profile is made
 
-### JSON-LD
-- [salt-security-context.jsonld](json-ld/salt-security-context.jsonld) — Linked data context for API security entities
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### Vocabulary
-- [salt-security-vocabulary.yml](vocabulary/salt-security-vocabulary.yml) — API security terminology
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Salt Security: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-## Maintained By
+## Open an issue
 
-[Kin Lane](mailto:kin@apievangelist.com) — [API Evangelist](https://apievangelist.com)
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/salt-security/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
